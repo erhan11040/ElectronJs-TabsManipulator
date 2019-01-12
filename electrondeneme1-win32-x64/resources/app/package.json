@@ -1,0 +1,48 @@
+{
+  "name": "electrondeneme1",
+  "version": "1.0.0",
+  "description": "Deneme uygulamasi",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Erhan Okumus",
+  "license": "MIT",
+  "dependencies": {
+    "draggabilly": "^2.2.0",
+    "electron": "^3.0.10",
+    "jquery": "^3.3.1"
+  },
+  "build": {
+    "appId": "yourappid",
+    "category": "your.app.category.type",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win": {
+      "target": "squirrel",
+      "icon": "build/icon.ico"
+    }
+  },
+  "devDependencies": {
+    "electron-builder": "^20.38.2",
+    "electron-packager": "^12.2.0"
+  }
+}
